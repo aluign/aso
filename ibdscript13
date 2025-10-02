@@ -1,0 +1,75 @@
+#!/bin/bash
+
+archivo="lista.txt"
+
+añadir_registro() {
+    echo "introducir el nombre: "
+    read nombre
+    echo " introduce direccion: " 
+    read direccion
+    echo " introduce telefono"
+    read telefono
+
+    echo " $nombre | $direccion | $telefono" >> "$archivo"
+    echo "registro añadido"
+
+}
+
+buscar_registro() {
+    echo "introduce el nombre, direccion o telefono a buscar: "
+    read busqueda
+    echo " resultado de la busqueda: "
+    grep -i "$busqueda" "$archivo" || echo " no se encontraron coincidencias"
+    
+}
+
+listar_registro() {
+    if [[ -s "$archivo"]]; 
+     then
+    echo "listado de registro: "
+    cat "la agenda esta vacia."
+
+    fi
+}
+
+ordenar_registros() {
+    if [[ -s "$archivo"]]
+        then
+    sort "$archivo" -o "$archivo"
+    echo "registros ordenados alfabeticamente."
+    else
+        echo " la agenda esta vacia"
+fi
+}
+
+borrar_archivo(){
+    rm -f "$archivo"
+    echo "archivo borrado"
+
+}
+
+while true; do
+
+    echo ""
+    echo " ===agenda===" 
+    echo "1. añadir registro" 
+    echo "2. buscar registro"  
+    echo "3. listar registros"
+    echo "4. ordenar registros"
+    echo "5. borrar archivo"
+    echo "6. salir"
+    echo " selecciona una opcion"
+    read opcion
+
+case $opcion in
+
+    1)añadir_registro ;;
+    2)buscar_registro ;;
+    3)listar_registros ;;
+    4)ordenar_registros ;;
+    5)borrar_archivo ;;
+    6) echo " saliendo del programa"; 
+break ;;
+    *) echo "opcion no valida. " ;;
+    esac
+done

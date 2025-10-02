@@ -1,0 +1,10 @@
+#!/bin/bash
+echo " ingresa el primer numero:"
+read numero1
+echo "ingresa el segundo numero:"
+read numero2
+
+media=$ (echo "($numero1 + $numero2)/2" | bc -1)
+
+echo "la media aritmetica de $numero1 y $numero2 es : $media"
+ 

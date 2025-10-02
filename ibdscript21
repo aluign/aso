@@ -1,0 +1,33 @@
+#!/bin/bash
+
+numero_a_adivinar=42
+
+echo " bienvenido al juego de adivinar el numero!!"
+echo " Estoy pensando en un numero del 1 al 100."
+echo " Intenta adivinarlo. escribe 0 si deseas rendirte. "
+
+while true; do
+
+    read -p "introduce un numero: " intento
+    
+
+    if [ "$intento" -eq 0 ]; 
+        then 
+        echo " te has rendido. El numero era $numero_a_adivinar."
+        break
+
+    fi
+
+    if [ "$intento" -lt " $numero_a_adivinar" ];
+        then
+        echo " el numero es mayor que $intento. Intenta de nuevo."
+        elif [ "$intento" -gt "$numero_a_adivinar"]; 
+        then
+        echo " el numero es menor que $intento. Intenta de nuevo."
+
+        else
+
+            echo " Enhorabuena !! has adivinado el numero: $numero_a_adivinar"
+            break
+        fi
+        done
