@@ -2,7 +2,7 @@
 
 hora=$(date +%H)
 
-if [ "$hora" -ge 8 ] && [ "hora" -lt 15 ];
+if [ "$hora" -ge 8 ] && [ "$hora" -lt 15 ];
     then
     echo "Buenos Dias"
     elif [ "$hora" -ge 15 ] && [ "$hora" -lt 20]; 

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-read -p echo "ingresa una palabra" palabra
+read -p "Ingresa una palabra" palabra
 
 echo "$palabra" >> lista.txt
 echo "la palabra $palabra ha sido agregada a la lista lista.txt"
+

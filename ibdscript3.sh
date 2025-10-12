@@ -10,8 +10,8 @@ cat "$SALIDA"
 
 echo "--------------------------------------------"
 
-lineas=$(wc -l < "$SALIDA")
-palabras=$(wc -w < "$SALIDA")
+NumLineas=$( wc -l < "$SALIDA" )
+NumPalabras=$( wc -w < "$SALIDA" )
 
-echo "Número de líneas del archivo: $li"
-echo "Número de palabras del archivo: $palabras"
+echo "Número de líneas del archivo: $NumLineas"
+echo "Número de palabras del archivo: $NumPalabras"

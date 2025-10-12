@@ -1,9 +1,0 @@
-#!/bin/bash
-
-echo "ingresa el primer numero:"
-read numero1
-echo "ingresa el segundo numero:"
-read numero2
-
-echo " el primer numero ingresado es: $numero1"
-echo " el segundo numero ingresado es: $numero2"

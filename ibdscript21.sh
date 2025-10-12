@@ -18,16 +18,16 @@ while true; do
 
     fi
 
-    if [ "$intento" -lt " $numero_a_adivinar" ];
+    if [ "$intento" -lt "$numero_a_adivinar" ];
         then
         echo " el numero es mayor que $intento. Intenta de nuevo."
-        elif [ "$intento" -gt "$numero_a_adivinar"]; 
+        elif [ "$intento" -gt "$numero_a_adivinar" ]; 
         then
         echo " el numero es menor que $intento. Intenta de nuevo."
 
         else
 
-            echo " Enhorabuena !! has adivinado el numero: $numero_a_adivinar"
-            break
+        echo " Enhorabuena !! has adivinado el numero: $numero_a_adivinar"
+        break
         fi
         done
